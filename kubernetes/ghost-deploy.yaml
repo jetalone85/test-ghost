@@ -5,10 +5,16 @@ metadata:
   labels:
     app: test-ghost
 spec:
-  replicas: 1
+  replicas: 5
+  revisionHistoryLimit: 25
   selector:
     matchLabels:
       app: test-ghost
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
   template:
     metadata:
       labels:
