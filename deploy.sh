@@ -5,4 +5,5 @@ docker build -t jetalone/test-ghost:latest .
 docker push docker.io/jetalone/test-ghost:latest
 
 kubectl create namespace test-ghost
+kubens test-ghost
 kubectl create -f kubernetes/
