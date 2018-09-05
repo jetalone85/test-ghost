@@ -1,8 +1,13 @@
 const express = require('express')
 var morgan = require('morgan')
+var helmet = require('helmet')
+var compression = require('compression')
+
 const app = express()
 
 app.use(morgan('combined'))
+app.use(helmet())
+app.use(compression())
 
 function errorHandler(err, req, res, next) {
   if (res.headersSent) {
