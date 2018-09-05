@@ -1,3 +1,14 @@
 body {
     font-family: 'Cabin', sans-serif;
+    margin-top: 0.5pc;
+    background-color: #fcfcfc;
+}
+
+form label {
+    font-size: 0.78pc;
+}
+
+form.skills h5 {
+    color: #3c3c3c;
+    font-size: 1pc;
 }
