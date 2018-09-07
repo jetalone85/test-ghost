@@ -7,6 +7,20 @@ function generate_mod(ability) {
 }
 
 $(document).ready(function() {
+
+    $.getJSON("api/character", function(data) {
+        $('#inputCharacterName').val(data.name)
+        $('#inputCharacterClasses').val(data.classes)
+        $('#inputCharacterLevel').val(data.level)
+        $('#inputCharacterRace').val(data.race)
+        $('#inputCharacterCharacter').val(data.chatacter)
+        $('#inputCharacterSex').val(data.sex)
+    });
+
+    $.getJSON("api/abilities", function(data) {
+        console.log(data)
+    });
+
     $('.input-value-1').bind('change', function() {
         $(this).parents('.input_abilities').children().find('.input-value-2').val(generate_mod($(this).val()));
 
