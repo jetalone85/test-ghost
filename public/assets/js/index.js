@@ -17,6 +17,10 @@ $(document).ready(function() {
         $('#inputCharacterSex').val(data.sex)
     });
 
+    $.getJSON("api/abilities", function(data) {
+        console.log(data)
+    });
+
     $('.input-value-1').bind('change', function() {
         $(this).parents('.input_abilities').children().find('.input-value-2').val(generate_mod($(this).val()));
 
