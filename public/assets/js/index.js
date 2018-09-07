@@ -16,7 +16,6 @@ $(document).ready(function () {
             $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).val($(this).parents('.input_abilities').children().find('.input-value-2').val());
         }
         $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).change();
-
     });
 
     $('.input-value-3').bind('change', function () {
