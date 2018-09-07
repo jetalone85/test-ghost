@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <h1 class="text-center">Postać</h1>
+                <div class="container">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="Valkhis">
+                                    <label for="inputAddress">Imię postaci</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-8">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="Kapłan">
+                                    <label for="inputAddress">Klasa</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="12">
+                                    <label for="inputAddress">Poziom</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="Elf">
+                                    <label for="inputAddress">Rasa</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-8">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="Chaotyczny neutralny">
+                                    <label for="inputAddress">Charakter</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="Męska">
+                                    <label for="inputAddress">Płeć</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <h1 class="text-center">Atrybuty</h1>
+                <div class="container">
+                    <div class="row table_labels">
+                        <div class="col col-2">Nazwa</div>
+                        <div class="col col-2">Wartość</div>
+                        <div class="col col-3">Modyfikator</div>
+                        <div class="col col-2">Tymczasowa wartość</div>
+                        <div class="col col-3">Tymczasowy modyfikator</div>
+                    </div>
+                    <form class="form">
+
+                    each val, index in abilities
+                        div(class='form-row input_abilities')
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    h5(class='input-name', for='input')= val.name
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-1', id='inputValue1', type='text', value=val.value1)
+                                </div>
+                            </div>
+                            <div class="form-group col-3">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-2', id='inputValue2', type='text', value=val.value2, disabled)
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-3', id='inputValue3', type='text', value=val.value3)
+                                </div>
+                            </div>
+                            <div class="form-group col-3">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-4', id='inputValue4', type='text', value=val.value4, disabled)
+                                </div>
+                            </div>
+                            
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <h1 class="text-center">Umiejętności</h1>
+                <div class="container">
+                    <div class="row table_labels">
+                        <div class="col col-3">Nazwa</div>
+                        <div class="col col-2">Premia</div>
+                        <div class="col col-2">Atrybut</div>
+                        <div class="col col-1">Klasowa</div>
+                        <div class="col col-2">Rangi</div>
+                        <div class="col col-2">Inne</div>
+                    </div>
+                    <form class="form skills">
+
+                    each val, index in skills
+
+                        div(class='form-row input_skills')
+                            <div class="form-group col-3">
+                                <div class="d-flex flex-column">
+                                    h5(class='input-name', for='input')= val.name
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-1', id='inputValue1', type='text', value=val.value1)
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-2 input-ability-'+val.ability, id='inputValue2', type='text', value=val.value2, disabled)
+                                </div>
+                            </div>
+                            <div class="form-group col-1">
+                                <div class="d-flex flex-column">
+                                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-3', id='inputValue3', type='text', value=val.value3)
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    input(class='form-control form-control-sm input-value-4', id='inputValue4', type='text', value=val.value4)
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-5">
+                <h1 class="text-center">Zdrowie</h1>
+                <div class="container">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-2 offset-6">
+                                <div class="d-flex flex-column">
+                                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="">
+                                        <label>Umierający</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="">
+                                        <label>Stabliny</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="">
+                                        <label>Nieprzytomny</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="168">
+                                    <label for="inputAddress">Punkty wytrzymałości</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-8">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="12, 32, 12">
+                                    <label for="inputAddress">Obrażenia</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="8">
+                                    <label for="inputAddress">Stłuczenia</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/index.js"></script>
+</body>
+
+</html>

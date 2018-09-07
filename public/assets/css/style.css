@@ -12,3 +12,17 @@ form.skills h5 {
     color: #3c3c3c;
     font-size: 1pc;
 }
+
+form input {
+    font-family: 'Itim', cursive;
+}
+
+.table_labels .col {
+    font-size: 0.78pc;
+}
+
+.red {
+    color: red;
+    background-color: darkred;
+    border: 2px solid red;
+}
