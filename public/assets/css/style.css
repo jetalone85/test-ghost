@@ -1,28 +1,37 @@
 body {
-    font-family: 'Cabin', sans-serif;
-    margin-top: 0.5pc;
-    background-color: #fcfcfc;
+    font-family: Cabin, sans-serif;
+    margin-top: .5pc;
+    background-color: #fcfcfc
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cormorant Garamond', serif
 }
 
 form label {
-    font-size: 0.78pc;
+    font-size: .78pc
 }
 
 form.skills h5 {
     color: #3c3c3c;
-    font-size: 1pc;
+    font-size: 1pc
 }
 
 form input {
-    font-family: 'Itim', cursive;
+    font-family: Itim, cursive
 }
 
 .table_labels .col {
-    font-size: 0.78pc;
+    font-size: .78pc
 }
 
 .red {
     color: red;
-    background-color: darkred;
-    border: 2px solid red;
+    background-color: #8b0000;
+    border: 2px solid red
 }
