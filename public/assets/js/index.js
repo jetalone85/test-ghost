@@ -18,9 +18,11 @@ $(document).ready(function() {
     });
 
     $.getJSON("api/abilities", function(data) {
-        console.log(data)
         for (i = 0; i < data.length; i++) {
-
+            $('.input_abilities_' + data[i].name).children().find('.input-value-1').val(data[i].value1);
+            $('.input_abilities_' + data[i].name).children().find('.input-value-1').change();
+            $('.input_abilities_' + data[i].name).children().find('.input-value-3').val(data[i].value3);
+            $('.input_abilities_' + data[i].name).children().find('.input-value-3').change();
         }
     });
 
