@@ -86,8 +86,8 @@ app.get('/', function(req, res) {
                 name: 'Czarostwo',
                 value1: null,
                 value2: null,
-                value3: 12,
-                value4: 2,
+                value3: null,
+                value4: null,
                 ability: 'INT',
             },
             {
