@@ -2,7 +2,7 @@
 html
 head
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>D&D Karta Postaci</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
@@ -66,10 +66,10 @@ body
                 <div class="container">
                     <div class="row table_labels">
                         <div class="col col-2">Nazwa</div>
-                        <div class="col col-2">Wartość</div>
-                        <div class="col col-3">Modyfikator</div>
-                        <div class="col col-2">Tymczasowa wartość</div>
-                        <div class="col col-3">Tymczasowy modyfikator</div>
+                        <div class="col col-3">Wartość</div>
+                        <div class="col col-2">Modyfikator</div>
+                        <div class="col col-3">Tymczasowa wartość</div>
+                        <div class="col col-2">Tymczasowy modyfikator</div>
                     </div>
                     <form class="form">
 
@@ -80,22 +80,22 @@ body
                                     h5(class='input-name', for='input')= val.name
                                 </div>
                             </div>
-                            <div class="form-group col-2">
+                            <div class="form-group col-3">
                                 <div class="d-flex flex-column">
                                     input(class='form-control form-control-sm input-value-1', id='inputValue1', type='number', value=val.value1)
                                 </div>
                             </div>
-                            <div class="form-group col-3">
+                            <div class="form-group col-2">
                                 <div class="d-flex flex-column">
                                     input(class='form-control form-control-sm input-value-2', id='inputValue2', type='number', value=val.value2, disabled)
                                 </div>
                             </div>
-                            <div class="form-group col-2">
+                            <div class="form-group col-3">
                                 <div class="d-flex flex-column">
                                     input(class='form-control form-control-sm input-value-3', id='inputValue3', type='number', value=val.value3)
                                 </div>
                             </div>
-                            <div class="form-group col-3">
+                            <div class="form-group col-2">
                                 <div class="d-flex flex-column">
                                     input(class='form-control form-control-sm input-value-4', id='inputValue4', type='number', value=val.value4, disabled)
                                 </div>
@@ -190,19 +190,25 @@ body
                         <div class="form-row">
                             <div class="form-group col-2">
                                 <div class="d-flex flex-column">
-                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="168">
+                                    <input type="text" class="form-control form-control-sm" id="inputHPSum" value="168" disabled>
                                     <label for="inputAddress">Punkty wytrzymałości</label>
                                 </div>
                             </div>
-                            <div class="form-group col-8">
+                            <div class="form-group col-2">
                                 <div class="d-flex flex-column">
-                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="12, 32, 12">
+                                    <input type="text" class="form-control form-control-sm" id="inputHPActual" value="104" disabled>
+                                    <label for="inputAddress">Bieżące punkty wytrzymałości</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-6">
+                                <div class="d-flex flex-column">
+                                    <input type="text" class="form-control form-control-sm" id="inputHPDataWounds" value="12, 32, 12">
                                     <label for="inputAddress">Obrażenia</label>
                                 </div>
                             </div>
                             <div class="form-group col-2">
                                 <div class="d-flex flex-column">
-                                    <input type="text" class="form-control form-control-sm" id="inputAddress" value="8">
+                                    <input type="text" class="form-control form-control-sm" id="inputHPDataNonLethal" value="8">
                                     <label for="inputAddress">Stłuczenia</label>
                                 </div>
                             </div>

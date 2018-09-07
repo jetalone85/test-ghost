@@ -20,6 +20,9 @@ function errorHandler(err, req, res, next) {
     })
 }
 
+var api = require('./router/api')
+app.use('/api', api)
+
 app.use('/assets', express.static('public/assets/'))
 
 app.get('/', function(req, res) {
