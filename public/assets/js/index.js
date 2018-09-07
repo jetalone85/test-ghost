@@ -28,13 +28,24 @@ $(document).ready(function() {
 
     $.getJSON("api/skills", function(data) {
         for (i = 0; i < data.length; i++) {
-            console.log(data[i])
             $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).val(data[i].value3)
             $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).change()
             $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).val(data[i].value4)
             $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).change()
         }
     })
+
+    $('.inputCharacter').find('.form-control').bind('change', function() {
+
+        console.log($(this).attr('field_data_name'))
+
+        $.post("api/character/single", {
+            id: 1,
+            name: $(this).attr('field_data_name'),
+            value: $(this).val()
+        });
+
+    });
 
     $('.input-value-1').bind('change', function() {
         $(this).parents('.input_abilities').children().find('.input-value-2').val(generate_mod($(this).val()))
@@ -44,7 +55,7 @@ $(document).ready(function() {
         } else {
             $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).val($(this).parents('.input_abilities').children().find('.input-value-2').val())
         }
-        $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).change()
+        // $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).change()
     });
 
     $('.input-value-3').bind('change', function() {
@@ -68,5 +79,6 @@ $(document).ready(function() {
             Math.floor(ability / 1 + range / 1 + additional / 1)
         )
     })
+
     $('.input-value-1, .input-value-2, .input-value-3, .input-value-4').trigger('change')
 })

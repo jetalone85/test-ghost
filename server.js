@@ -2,6 +2,8 @@ const express = require('express')
 var morgan = require('morgan')
 var helmet = require('helmet')
 var compression = require('compression')
+var AWS = require("aws-sdk");
+
 
 const app = express()
 
@@ -9,6 +11,12 @@ app.use(morgan('combined'))
 app.use(helmet())
 app.use(compression())
 app.set('view engine', 'pug')
+
+AWS.config.update({
+    region: "eu-west-2",
+    endpoint: "http://localhost:8000"
+});
+var docClient = new AWS.DynamoDB.DocumentClient();
 
 function errorHandler(err, req, res, next) {
     if (res.headersSent) {
