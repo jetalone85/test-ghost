@@ -26,6 +26,13 @@ $(document).ready(function() {
         }
     })
 
+    $.getJSON("api/skills", function(data) {
+        for (i = 0; i < data.length; i++) {
+            console.log(data[i])
+            $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).addClass("red")
+        }
+    })
+
     $('.input-value-1').bind('change', function() {
         $(this).parents('.input_abilities').children().find('.input-value-2').val(generate_mod($(this).val()))
 

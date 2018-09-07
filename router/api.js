@@ -71,6 +71,7 @@ router.get('/skills', function(req, res) {
         JSON.stringify(
             [{
                     name: 'Blefowanie',
+                    code: 'blef',
                     value1: null,
                     value2: null,
                     value3: 12,
@@ -79,6 +80,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Ciche poruszanie',
+                    code: 'cich',
                     value1: null,
                     value2: null,
                     value3: 15,
@@ -87,6 +89,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Czarostwo',
+                    code: 'czar',
                     value1: null,
                     value2: null,
                     value3: 12,
@@ -95,6 +98,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Dyplomacja',
+                    code: 'dyplo',
                     value1: null,
                     value2: null,
                     value3: 8,
@@ -103,6 +107,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Fałszerstwo',
+                    code: 'falsz',
                     value1: null,
                     value2: null,
                     value3: 0,
@@ -111,6 +116,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Jeździectwo',
+                    code: 'jezdz',
                     value1: null,
                     value2: null,
                     value3: 6,
@@ -119,6 +125,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Koncentracja',
+                    code: 'konc',
                     value1: null,
                     value2: null,
                     value3: 15,
@@ -127,6 +134,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Leczenie',
+                    code: 'lecz',
                     value1: null,
                     value2: null,
                     value3: 15,
@@ -135,6 +143,7 @@ router.get('/skills', function(req, res) {
                 },
                 {
                     name: 'Nasłuchiwanie',
+                    code: 'nasl',
                     value1: null,
                     value2: null,
                     value3: 8,
