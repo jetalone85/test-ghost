@@ -19,6 +19,9 @@ $(document).ready(function() {
 
     $.getJSON("api/abilities", function(data) {
         console.log(data)
+        for (i = 0; i < data.length; i++) {
+
+        }
     });
 
     $('.input-value-1').bind('change', function() {
