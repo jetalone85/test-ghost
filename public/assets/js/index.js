@@ -29,7 +29,10 @@ $(document).ready(function() {
     $.getJSON("api/skills", function(data) {
         for (i = 0; i < data.length; i++) {
             console.log(data[i])
-            $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).addClass("red")
+            $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).val(data[i].value3)
+            $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).change()
+            $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).val(data[i].value4)
+            $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).change()
         }
     })
 
