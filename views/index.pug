@@ -2,6 +2,9 @@
 html
 head
     <meta charset="UTF-8">
+    <meta content="origin-when-cross-origin" name="referrer" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#aaaaaa">
     <title>D&D Karta Postaci</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
@@ -9,11 +12,11 @@ head
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" />
 
-body
+body(data-view='app' data-responsive='true' data-user-signed-in='false')
 
     div(class='container-fluid')
         <div class="row">
-            <div class="col-3">
+            <div class="col col-lg-3 col-sm-12">
                 <h1 class="text-center">Postać</h1>
                 <div class="container">
                     <form class="inputCharacter">
@@ -106,7 +109,7 @@ body
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col col-lg-4 col-sm-12">
                 <h1 class="text-center">Umiejętności</h1>
                 <div class="container">
                     <div class="row table_labels">
@@ -158,7 +161,7 @@ body
                 </div>
             </div>
 
-            <div class="col-5">
+            <div class="col col-lg-5 col-sm-12">
                 <h1 class="text-center">Zdrowie</h1>
                 <div class="container">
                     <form>

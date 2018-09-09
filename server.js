@@ -35,10 +35,6 @@ app.use('/api', api)
 app.use('/assets', express.static('public/assets/'))
 
 app.get('/', function(req, res) {
-
-    console.log(abilities.get())
-    console.log(skills.get())
-
     res.render('index', {
         title: 'Hey',
         message: 'Hello there!',
