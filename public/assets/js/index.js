@@ -36,16 +36,12 @@ $(document).ready(function() {
     })
 
     $('.inputCharacter').find('.form-control').bind('change', function() {
-
-        console.log($(this).attr('field_data_name'))
-
         $.post("api/character/single", {
             id: 1,
             name: $(this).attr('field_data_name'),
             value: $(this).val()
-        });
-
-    });
+        })
+    })
 
     $('.input-value-1').bind('change', function() {
         $(this).parents('.input_abilities').children().find('.input-value-2').val(generate_mod($(this).val()))
@@ -55,7 +51,7 @@ $(document).ready(function() {
         } else {
             $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).val($(this).parents('.input_abilities').children().find('.input-value-2').val())
         }
-        // $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).change()
+        $(document).find('.input_skills').find('.input-ability-' + $(this).parents('.input_abilities').children().find('.input-name').text()).change()
     });
 
     $('.input-value-3').bind('change', function() {
