@@ -14,16 +14,21 @@ h6 {
 }
 
 form label {
-    font-size: .78pc
+    font-size: .74pc
 }
 
 form.skills h5 {
     color: #3c3c3c;
-    font-size: 1pc
+    font-size: 0.92pc;
 }
 
 form input {
     font-family: Itim, cursive
+}
+
+.form-group {
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .table_labels .col {
