@@ -7,7 +7,7 @@
         "Role": 1,
         "Character": 2,
         "Abilities": 9,
-        "Skills": 2
+        "Skills": 37
     },
     "models": {
         "User": {},
@@ -20,14 +20,49 @@
         },
         "Abilities": {
             "3": "{\"name\":\"S\",\"value1\":12,\"value3\":0,\"CharacterId\":1,\"id\":3}",
-            "4": "{\"name\":\"ZR\",\"value1\":17,\"value3\":0,\"CharacterId\":1,\"id\":4}",
-            "5": "{\"name\":\"BD\",\"value1\":22,\"value3\":0,\"CharacterId\":1,\"id\":5}",
-            "6": "{\"name\":\"INT\",\"value1\":25,\"value3\":0,\"CharacterId\":1,\"id\":6}",
-            "7": "{\"name\":\"RZT\",\"value1\":12,\"value3\":0,\"CharacterId\":1,\"id\":7}",
-            "8": "{\"name\":\"CHA\",\"value1\":27,\"value3\":0,\"CharacterId\":1,\"id\":8}"
+            "4": "{\"name\":\"ZR\",\"value1\":22,\"value3\":26,\"CharacterId\":1,\"id\":4}",
+            "5": "{\"name\":\"BD\",\"value1\":14,\"value3\":0,\"CharacterId\":1,\"id\":5}",
+            "6": "{\"name\":\"INT\",\"value1\":20,\"value3\":24,\"CharacterId\":1,\"id\":6}",
+            "7": "{\"name\":\"RZT\",\"value1\":14,\"value3\":0,\"CharacterId\":1,\"id\":7}",
+            "8": "{\"name\":\"CHA\",\"value1\":18,\"value3\":0,\"CharacterId\":1,\"id\":8}"
         },
         "Skills": {
-            "1": "{\"name\":\"Blefowanie\",\"code\":\"blef\",\"value3\":12,\"value4\":0,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":1}"
+            "1": "{\"name\":\"Blefowanie\",\"code\":\"blef\",\"value3\":12,\"value4\":5,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":1}",
+            "2": "{\"name\":\"Ciche poruszanie\",\"code\":\"cich\",\"value3\":15,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":2}",
+            "3": "{\"name\":\"Czarostwo\",\"code\":\"czar\",\"value3\":15,\"value4\":2,\"ability\":\"INT\",\"CharacterId\":1,\"id\":3}",
+            "4": "{\"name\":\"Dyplomacja\",\"code\":\"dyplo\",\"value3\":15,\"value4\":0,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":4}",
+            "5": "{\"name\":\"Fałszerstwo\",\"code\":\"falsz\",\"value3\":15,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":5}",
+            "6": "{\"name\":\"Jeździectwo\",\"code\":\"jezdz\",\"value3\":15,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":6}",
+            "7": "{\"name\":\"Koncentracja\",\"code\":\"konc\",\"value3\":15,\"value4\":1,\"ability\":\"BD\",\"CharacterId\":1,\"id\":7}",
+            "8": "{\"name\":\"Leczenie\",\"code\":\"lecz\",\"value3\":2,\"value4\":0,\"ability\":\"RZT\",\"CharacterId\":1,\"id\":8}",
+            "9": "{\"name\":\"Nasłuchiwanie\",\"code\":\"nasl\",\"value3\":12,\"value4\":0,\"ability\":\"RZT\",\"CharacterId\":1,\"id\":9}",
+            "10": "{\"name\":\"Odszyfrowanie Zapisków\",\"code\":\"odcyf\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":10}",
+            "11": "{\"name\":\"Postępowanie ze Zwierzętami\",\"code\":\"poszz\",\"value3\":0,\"value4\":0,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":11}",
+            "12": "{\"name\":\"Przebieranie\",\"code\":\"przeb\",\"value3\":0,\"value4\":5,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":12}",
+            "13": "{\"name\":\"Przeszukiwanie\",\"code\":\"przesz\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":13}",
+            "14": "{\"name\":\"Pływanie\",\"code\":\"plyw\",\"value3\":0,\"value4\":0,\"ability\":\"S\",\"CharacterId\":1,\"id\":14}",
+            "15": "{\"name\":\"Rzemiosło\",\"code\":\"rzemio\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":15}",
+            "16": "{\"name\":\"Skakanie\",\"code\":\"skak\",\"value3\":0,\"value4\":0,\"ability\":\"S\",\"CharacterId\":1,\"id\":16}",
+            "17": "{\"name\":\"Spostrzegawczość\",\"code\":\"spost\",\"value3\":12,\"value4\":0,\"ability\":\"RZT\",\"CharacterId\":1,\"id\":17}",
+            "18": "{\"name\":\"Szacowanie\",\"code\":\"szac\",\"value3\":12,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":18}",
+            "19": "{\"name\":\"Sztuka Przetrwania\",\"code\":\"sztprz\",\"value3\":2,\"value4\":0,\"ability\":\"RZT\",\"CharacterId\":1,\"id\":19}",
+            "20": "{\"name\":\"Ukrywanie się\",\"code\":\"ukryw\",\"value3\":10,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":20}",
+            "21": "{\"name\":\"Unieszkodliwianie Mechanizmów\",\"code\":\"uniesz\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":21}",
+            "22": "{\"name\":\"Upadanie\",\"code\":\"upada\",\"value3\":0,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":22}",
+            "23": "{\"name\":\"Używanie Liny\",\"code\":\"uzlin\",\"value3\":0,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":23}",
+            "24": "{\"name\":\"Używanie Magicznych Urządzeń\",\"code\":\"uzmech\",\"value3\":0,\"value4\":0,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":24}",
+            "25": "{\"name\":\"Wiedza (Geografia)\",\"code\":\"wiegeo\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":25}",
+            "26": "{\"name\":\"Wiedza (Historia)\",\"code\":\"wiehis\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":26}",
+            "27": "{\"name\":\"Wiedza (Plany)\",\"code\":\"wiepla\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":27}",
+            "28": "{\"name\":\"Wiedza (Religia)\",\"code\":\"wierel\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":28}",
+            "29": "{\"name\":\"Wiedza (Szlachta i władcy)\",\"code\":\"wieszla\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":29}",
+            "30": "{\"name\":\"Wiedza (Tajemna)\",\"code\":\"wietaj\",\"value3\":0,\"value4\":0,\"ability\":\"INT\",\"CharacterId\":1,\"id\":30}",
+            "31": "{\"name\":\"Wspinaczka\",\"code\":\"wspin\",\"value3\":0,\"value4\":0,\"ability\":\"S\",\"CharacterId\":1,\"id\":31}",
+            "32": "{\"name\":\"Wyzwalanie się\",\"code\":\"wyzwal\",\"value3\":0,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":32}",
+            "33": "{\"name\":\"Zachowanie Równowagi\",\"code\":\"zachr\",\"value3\":0,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":33}",
+            "34": "{\"name\":\"Zastraszanie\",\"code\":\"zastr\",\"value3\":5,\"value4\":5,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":34}",
+            "35": "{\"name\":\"Zbieranie Informacji\",\"code\":\"zbinfo\",\"value3\":0,\"value4\":0,\"ability\":\"CHA\",\"CharacterId\":1,\"id\":35}",
+            "36": "{\"name\":\"Zręczna Dłoń\",\"code\":\"zredl\",\"value3\":0,\"value4\":0,\"ability\":\"ZR\",\"CharacterId\":1,\"id\":36}"
         }
     }
 }
