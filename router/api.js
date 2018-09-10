@@ -50,19 +50,18 @@ router.get('/skills', function(req, res) {
 
 router.get('/character', function(req, res) {
 
-    var params = {
-        TableName: "Characters",
-        Key: {
-            "id": 1
-        },
-    }
+    var id = 1
 
-    docClient.get(params, function(err, data) {
-        if (err) {
-            console.error("Unable to get Character. Error JSON:", JSON.stringify(err, null, 2))
-        } else {
-            res.send(data.Item)
-        }
+    var Character = require('../src/Character');
+    console.log()
+
+    var promise1 = new Promise(function(resolve, reject) {
+
+        console.log(resolve)
+        console.log(reject)
+
+        console.log(Character.get())
+        res.send('OK!')
     })
 })
 
