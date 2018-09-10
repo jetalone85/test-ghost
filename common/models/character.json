@@ -1,24 +1,40 @@
 {
-  "name": "Character",
-  "plural": "Characters",
-  "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
-  "properties": {
-    "name": {
-      "type": "string",
-      "required": true
+    "name": "Character",
+    "plural": "Characters",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
     },
-    "level": {
-      "type": "number",
-      "required": true,
-      "default": 1
-    }
-  },
-  "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": {}
+    "properties": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "level": {
+            "type": "number",
+            "required": true,
+            "default": 1
+        },
+        "classes": {
+            "type": "string",
+            "required": false
+        },
+        "race": {
+            "type": "string",
+            "required": false
+        },
+        "character": {
+            "type": "string",
+            "required": false
+        },
+        "sex": {
+            "type": "string",
+            "required": false
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
 }

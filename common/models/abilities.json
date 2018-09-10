@@ -1,0 +1,35 @@
+{
+  "name": "Abilities",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "value1": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "value3": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "character": {
+      "type": "belongsTo",
+      "model": "Character",
+      "foreignKey": "CharacterId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -6,34 +6,43 @@ function generate_mod(ability) {
     }
 }
 
+function gup(name, url) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(url);
+    return results == null ? null : results[1];
+}
+
 $(document).ready(function() {
 
-    $.getJSON("api/character", function(data) {
-        $('#inputCharacterName').val(data.name)
-        $('#inputCharacterClasses').val(data.classes)
-        $('#inputCharacterLevel').val(data.level)
-        $('#inputCharacterRace').val(data.race)
-        $('#inputCharacterCharacter').val(data.chatacter)
-        $('#inputCharacterSex').val(data.sex)
-    });
+    // $.getJSON("api/Characters/1", function(data) {
+    //     $('#inputCharacterName').val(data.name)
+    //     $('#inputCharacterClasses').val(data.classes)
+    //     $('#inputCharacterLevel').val(data.level)
+    //     $('#inputCharacterRace').val(data.race)
+    //     $('#inputCharacterCharacter').val(data.chatacter)
+    //     $('#inputCharacterSex').val(data.sex)
+    // });
 
-    $.getJSON("api/abilities", function(data) {
-        for (i = 0; i < data.length; i++) {
-            $('.input_abilities_' + data[i].name).children().find('.input-value-1').val(data[i].value1)
-            $('.input_abilities_' + data[i].name).children().find('.input-value-1').change()
-            $('.input_abilities_' + data[i].name).children().find('.input-value-3').val(data[i].value3)
-            $('.input_abilities_' + data[i].name).children().find('.input-value-3').change()
-        }
-    })
+    // $.getJSON("api/Abilities", function(data) {
+    //     for (i = 0; i < data.length; i++) {
+    //         $('.input_abilities_' + data[i].name).children().find('.input-value-1').val(data[i].value1)
+    //         $('.input_abilities_' + data[i].name).children().find('.input-value-1').change()
+    //         $('.input_abilities_' + data[i].name).children().find('.input-value-3').val(data[i].value3)
+    //         $('.input_abilities_' + data[i].name).children().find('.input-value-3').change()
+    //     }
+    // })
 
-    $.getJSON("api/skills", function(data) {
-        for (i = 0; i < data.length; i++) {
-            $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).val(data[i].value3)
-            $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).change()
-            $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).val(data[i].value4)
-            $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).change()
-        }
-    })
+    // $.getJSON("api/Skills", function(data) {
+    //     for (i = 0; i < data.length; i++) {
+    //         $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).val(data[i].value3)
+    //         $(document).find('.input_skills').find('.inputSkillValue3_' + data[i].code).change()
+    //         $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).val(data[i].value4)
+    //         $(document).find('.input_skills').find('.inputSkillValue4_' + data[i].code).change()
+    //     }
+    // })
 
     $('.inputCharacter').find('.form-control').bind('change', function() {
         $.post("api/character/single", {

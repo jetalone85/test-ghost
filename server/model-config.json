@@ -38,5 +38,13 @@
   "Character": {
     "dataSource": "db",
     "public": true
+  },
+  "Abilities": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Skills": {
+    "dataSource": "db",
+    "public": true
   }
 }

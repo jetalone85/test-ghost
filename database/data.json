@@ -1,0 +1,33 @@
+{
+    "ids": {
+        "User": 1,
+        "AccessToken": 1,
+        "ACL": 1,
+        "RoleMapping": 1,
+        "Role": 1,
+        "Character": 2,
+        "Abilities": 9,
+        "Skills": 2
+    },
+    "models": {
+        "User": {},
+        "AccessToken": {},
+        "ACL": {},
+        "RoleMapping": {},
+        "Role": {},
+        "Character": {
+            "1": "{\"name\":\"Czesio\",\"level\":1,\"classes\":\"Mag\",\"race\":\"Człowiek\",\"character\":\"Jakiś\",\"sex\":\"Jakaś\",\"id\":1}"
+        },
+        "Abilities": {
+            "3": "{\"name\":\"S\",\"value1\":12,\"value3\":0,\"CharacterId\":1,\"id\":3}",
+            "4": "{\"name\":\"ZR\",\"value1\":17,\"value3\":0,\"CharacterId\":1,\"id\":4}",
+            "5": "{\"name\":\"BD\",\"value1\":22,\"value3\":0,\"CharacterId\":1,\"id\":5}",
+            "6": "{\"name\":\"INT\",\"value1\":25,\"value3\":0,\"CharacterId\":1,\"id\":6}",
+            "7": "{\"name\":\"RZT\",\"value1\":12,\"value3\":0,\"CharacterId\":1,\"id\":7}",
+            "8": "{\"name\":\"CHA\",\"value1\":27,\"value3\":0,\"CharacterId\":1,\"id\":8}"
+        },
+        "Skills": {
+            "1": "{\"name\":\"Blefowanie\",\"code\":\"blef\",\"value3\":12,\"value4\":0,\"ability\":\"string\",\"CharacterId\":1,\"id\":1}"
+        }
+    }
+}
