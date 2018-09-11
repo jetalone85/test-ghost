@@ -1,21 +1,21 @@
 'use strict';
 
-const express = require('express')
+const express = require('express');
 const path = require('path');
 
 var dsConfig = require('../datasources.json');
 
 module.exports = function(app) {
-    var User = app.models.user
-    app.set('view engine', 'pug')
+    var User = app.models.user;
+    app.set('view engine', 'pug');
 
-    app.use('/robots.txt', express.static('public/robots.txt'))
+    app.use('/robots.txt', express.static('public/robots.txt'));
 
-    app.use('/', express.static('public'))
+    app.use('/', express.static('public'));
 
     app.get('/', function(req, res) {
         res.render('index', {})
-    })
+    });
 
     //login page
     app.get('/login', function(req, res) {
@@ -407,7 +407,7 @@ module.exports = function(app) {
         //         },
         //     ]
         // })
-    })
+    });
 
     app.get('/healthz', (req, res) => res.send('ok!'))
-}
+};
