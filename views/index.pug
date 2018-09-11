@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-html
-head
-    meta(charset='UTF-8')
-    meta(content='origin-when-cross-origin' name='referrer')
-    meta(name='viewport' content='width=device-width,initial-scale=1')
-    meta(name='theme-color' content='#aaaaaa')
-    title D&D Karta Postaci
-    link(href='/assets/css/bootstrap.css' rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Cormorant+Garamond' rel='stylesheet')
-    link(href='/assets/css/style.css' rel='stylesheet')
+include includes/head
 
-body(data-view='app' data-responsive='true' data-user-signed-in='false')
+body(data-responsive='true' data-user-signed-in='false' data-view='app')
 
     div(class='container-fluid')
         h1(class='') D&amp;D ToolBox
@@ -21,3 +9,5 @@ body(data-view='app' data-responsive='true' data-user-signed-in='false')
     script(src='/assets/js/jquery.js')
     script(src='/assets/js/bootstrap.js')
     script(src='/assets/js/index.js')
+
+    include includes/foot
